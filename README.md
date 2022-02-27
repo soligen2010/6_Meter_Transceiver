@@ -3,7 +3,7 @@ A homebrew transceiver for the 6 meter Ham band
  
 This project is Work in progress.
 
-![](6 Meter Block Diagram.jpg)
+![](6_Meter_Block_Diagram.jpg)
  
 ## 2022-2-27 Status
  
