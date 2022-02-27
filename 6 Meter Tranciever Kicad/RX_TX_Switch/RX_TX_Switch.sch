@@ -1,0 +1,436 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay:G5V-2 K1
+U 1 1 61B2ECE2
+P 4550 3100
+F 0 "K1" H 5180 3146 50  0000 L CNN
+F 1 "FINDER-44.52" H 5180 3055 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G5V-2" H 5900 3070 50  0001 C CNN
+F 3 "http://gfinder.findernet.com/assets/Series/359/S44EN.pdf" H 4550 3100 50  0001 C CNN
+	1    4550 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61B3ABB2
+P 2950 4300
+F 0 "R1" H 3020 4346 50  0000 L CNN
+F 1 "10K" H 3020 4255 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 2880 4300 50  0001 C CNN
+F 3 "~" H 2950 4300 50  0001 C CNN
+	1    2950 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 61B39844
+P 3500 3950
+F 0 "R2" V 3600 3900 50  0000 L CNN
+F 1 "3K3" V 3700 3900 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 3430 3950 50  0001 C CNN
+F 3 "~" H 3500 3950 50  0001 C CNN
+	1    3500 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR01
+U 1 1 61B3B551
+P 4150 4850
+F 0 "#PWR01" H 4150 4600 50  0001 C CNN
+F 1 "GNDREF" H 4155 4677 50  0000 C CNN
+F 2 "" H 4150 4850 50  0001 C CNN
+F 3 "" H 4150 4850 50  0001 C CNN
+	1    4150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:AO3400A Q1
+U 1 1 61B3BF8F
+P 4050 3950
+F 0 "Q1" H 4250 3900 50  0000 L CNN
+F 1 "AO3400" H 4250 3800 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 4250 3875 50  0001 L CIN
+F 3 "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf" H 4050 3950 50  0001 L CNN
+	1    4050 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3950 3750 3950
+Wire Wire Line
+	4150 3750 4150 3600
+Wire Wire Line
+	3350 3950 2950 3950
+Wire Wire Line
+	2950 3950 2950 4150
+Wire Wire Line
+	4150 4150 4150 4600
+Wire Wire Line
+	2950 4450 2950 4600
+Wire Wire Line
+	2950 4600 3750 4600
+Connection ~ 4150 4600
+Wire Wire Line
+	4150 4600 4150 4850
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 61B40FF7
+P 5500 4000
+F 0 "J1" H 5600 3975 50  0000 L CNN
+F 1 "Radio" H 5600 3884 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 5500 4000 50  0001 C CNN
+F 3 " ~" H 5500 4000 50  0001 C CNN
+	1    5500 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 61B41701
+P 4450 1150
+F 0 "J3" V 4700 1100 50  0000 L CNN
+F 1 "RX to Radio" V 4600 750 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 4450 1150 50  0001 C CNN
+F 3 " ~" H 4450 1150 50  0001 C CNN
+	1    4450 1150
+	0    1    -1   0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 61B41A28
+P 4650 1150
+F 0 "J5" V 4900 1150 50  0000 C CNN
+F 1 "TX from Radio" V 4800 900 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 4650 1150 50  0001 C CNN
+F 3 " ~" H 4650 1150 50  0001 C CNN
+	1    4650 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 61B41DEE
+P 3950 1500
+F 0 "J2" H 3900 1750 50  0000 L CNN
+F 1 "RX from Ant" H 3850 1650 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 3950 1500 50  0001 C CNN
+F 3 " ~" H 3950 1500 50  0001 C CNN
+	1    3950 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 61B423DE
+P 5050 1500
+F 0 "J4" V 5287 1429 50  0000 C CNN
+F 1 "TX to Ant" V 5196 1429 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 5050 1500 50  0001 C CNN
+F 3 " ~" H 5050 1500 50  0001 C CNN
+	1    5050 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J6
+U 1 1 61B43791
+P 6000 3600
+F 0 "J6" H 6100 3575 50  0000 L CNN
+F 1 "Antenna" H 6100 3484 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 6000 3600 50  0001 C CNN
+F 3 " ~" H 6000 3600 50  0001 C CNN
+	1    6000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR03
+U 1 1 61B4B52A
+P 5500 1700
+F 0 "#PWR03" H 5500 1450 50  0001 C CNN
+F 1 "GNDREF" H 5505 1527 50  0000 C CNN
+F 2 "" H 5500 1700 50  0001 C CNN
+F 3 "" H 5500 1700 50  0001 C CNN
+	1    5500 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1500 5500 1500
+Wire Wire Line
+	5500 1500 5500 1700
+Wire Wire Line
+	5500 1150 5500 1500
+Connection ~ 5500 1500
+Wire Wire Line
+	4850 1150 5500 1150
+$Comp
+L power:GNDREF #PWR02
+U 1 1 61B5647D
+P 3450 2100
+F 0 "#PWR02" H 3450 1850 50  0001 C CNN
+F 1 "GNDREF" H 3455 1927 50  0000 C CNN
+F 2 "" H 3450 2100 50  0001 C CNN
+F 3 "" H 3450 2100 50  0001 C CNN
+	1    3450 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1150 3450 1750
+Wire Wire Line
+	3950 1700 3950 1750
+Wire Wire Line
+	3950 1750 3450 1750
+Connection ~ 3450 1750
+Wire Wire Line
+	3450 1150 4250 1150
+Wire Wire Line
+	3450 1750 3450 2050
+Wire Wire Line
+	4150 1500 4300 1500
+Wire Wire Line
+	4300 2050 4300 1500
+Connection ~ 4300 1500
+Wire Wire Line
+	4300 1500 4850 1500
+Wire Wire Line
+	3750 1950 3750 2050
+Wire Wire Line
+	4150 2050 4150 2100
+Connection ~ 4150 2050
+Wire Wire Line
+	4150 2050 4300 2050
+Wire Wire Line
+	4150 2100 4100 2100
+Wire Wire Line
+	4150 1950 4150 2050
+Wire Wire Line
+	4100 1950 4150 1950
+Wire Wire Line
+	3750 2100 3800 2100
+Wire Wire Line
+	3800 1950 3750 1950
+$Comp
+L Diode:1N4148 D2
+U 1 1 61B5BC38
+P 3950 2100
+F 0 "D2" H 4100 2000 50  0000 C CNN
+F 1 "1N4148" H 3850 2000 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 3950 1925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 2100 50  0001 C CNN
+	1    3950 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 61B5960D
+P 3950 1950
+F 0 "D1" H 3800 2050 50  0000 C CNN
+F 1 "1N4148" H 4050 2050 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 3950 1775 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 1950 50  0001 C CNN
+	1    3950 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2050 3450 2050
+Connection ~ 3750 2050
+Wire Wire Line
+	3750 2050 3750 2100
+Connection ~ 3450 2050
+Wire Wire Line
+	3450 2050 3450 2100
+$Comp
+L Device:D_Zener_Small D3
+U 1 1 61B66656
+P 3750 4300
+F 0 "D3" V 3704 4370 50  0000 L CNN
+F 1 "6.8V" V 3795 4370 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF_Handsoldering" V 3750 4300 50  0001 C CNN
+F 3 "~" V 3750 4300 50  0001 C CNN
+	1    3750 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 4200 3750 3950
+Connection ~ 3750 3950
+Wire Wire Line
+	3750 3950 3650 3950
+Wire Wire Line
+	3750 4400 3750 4600
+Connection ~ 3750 4600
+Wire Wire Line
+	3750 4600 4150 4600
+$Comp
+L Connector:Conn_01x03_Male J7
+U 1 1 61B68F9C
+P 2050 2800
+F 0 "J7" H 2158 3081 50  0000 C CNN
+F 1 "Power & RX/TX" H 1650 2950 50  0000 C CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 2050 2800 50  0001 C CNN
+F 3 "~" H 2050 2800 50  0001 C CNN
+	1    2050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1700 5050 2800
+Wire Wire Line
+	4850 1500 4850 2800
+Wire Wire Line
+	4650 1350 4650 2800
+Wire Wire Line
+	4450 1350 4450 2800
+$Comp
+L power:GNDREF #PWR04
+U 1 1 61B75950
+P 2450 3400
+F 0 "#PWR04" H 2450 3150 50  0001 C CNN
+F 1 "GNDREF" H 2455 3227 50  0000 C CNN
+F 2 "" H 2450 3400 50  0001 C CNN
+F 3 "" H 2450 3400 50  0001 C CNN
+	1    2450 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2900 2450 2900
+Wire Wire Line
+	2250 2800 1800 2800
+Wire Wire Line
+	1800 2800 1800 3950
+Connection ~ 2950 3950
+$Comp
+L Diode:SM4004 D4
+U 1 1 61B77E52
+P 2700 2700
+F 0 "D4" H 2700 2483 50  0000 C CNN
+F 1 "SM4004" H 2700 2574 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 2700 2525 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A400/SMD1N400%23DIO.pdf" H 2700 2700 50  0001 C CNN
+	1    2700 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 2700 4150 2800
+$Comp
+L Diode:SM4004 D5
+U 1 1 61B7CE10
+P 3750 3350
+F 0 "D5" V 3850 3150 50  0000 L CNN
+F 1 "SM4004" V 3950 3050 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 3750 3175 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A400/SMD1N400%23DIO.pdf" H 3750 3350 50  0001 C CNN
+	1    3750 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3200 3750 2700
+Wire Wire Line
+	3750 2700 4150 2700
+Wire Wire Line
+	3750 3500 3750 3600
+Wire Wire Line
+	3750 3600 4150 3600
+Connection ~ 4150 3600
+Wire Wire Line
+	4150 3600 4150 3400
+Wire Wire Line
+	4950 3400 4950 3600
+Wire Wire Line
+	4950 3600 5800 3600
+Wire Wire Line
+	4150 4600 5500 4600
+Wire Wire Line
+	6000 4600 6000 3800
+Wire Wire Line
+	5500 4200 5500 4600
+Connection ~ 5500 4600
+Wire Wire Line
+	5500 4600 6000 4600
+Wire Wire Line
+	4550 4000 4550 3400
+Wire Wire Line
+	4550 4000 5300 4000
+Wire Wire Line
+	1800 3950 2950 3950
+Wire Wire Line
+	2450 2900 2450 3300
+$Comp
+L Device:C_Small C1
+U 1 1 61C49475
+P 3300 3100
+F 0 "C1" H 3100 3150 50  0000 L CNN
+F 1 "10u" H 3100 3050 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" H 3300 3100 50  0001 C CNN
+F 3 "~" H 3300 3100 50  0001 C CNN
+	1    3300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 61C4B65A
+P 2950 3100
+F 0 "C2" H 2750 3150 50  0000 L CNN
+F 1 ".1u" H 2750 3050 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" H 2950 3100 50  0001 C CNN
+F 3 "~" H 2950 3100 50  0001 C CNN
+	1    2950 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2700 2550 2700
+Connection ~ 3750 2700
+Wire Wire Line
+	3300 3000 3300 2700
+Connection ~ 3300 2700
+Wire Wire Line
+	3300 3200 3300 3300
+Connection ~ 2450 3300
+Wire Wire Line
+	2450 3300 2450 3400
+Text Label 2400 2700 0    50   ~ 0
+13V
+Wire Wire Line
+	2850 2700 2950 2700
+Wire Wire Line
+	2450 3300 2950 3300
+$Comp
+L Device:R R3
+U 1 1 61C66F65
+P 3600 2950
+F 0 "R3" H 3400 3000 50  0000 L CNN
+F 1 "100K" H 3350 2900 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 3530 2950 50  0001 C CNN
+F 3 "~" H 3600 2950 50  0001 C CNN
+	1    3600 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3000 2950 2700
+Connection ~ 2950 2700
+Wire Wire Line
+	2950 2700 3300 2700
+Wire Wire Line
+	2950 3200 2950 3300
+Connection ~ 2950 3300
+Wire Wire Line
+	2950 3300 3300 3300
+Wire Wire Line
+	3300 2700 3600 2700
+Wire Wire Line
+	3600 2800 3600 2700
+Connection ~ 3600 2700
+Wire Wire Line
+	3600 2700 3750 2700
+Wire Wire Line
+	3600 3100 3600 3300
+Wire Wire Line
+	3600 3300 3300 3300
+Connection ~ 3300 3300
+$EndSCHEMATC

@@ -1,0 +1,36 @@
+8199883625976
+WC8C
+5mm_Pads
+
+
+0
+2
+2
+WC8C
+Cap_0805_1206_6032
+Tantalum Capacitor SMD AVX-F (6032-20 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+WC8C
+SMD_Combo_1206_0805
+Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+capacitor handsolder
+0
+2
+2
+WC8C
+T37_AutoTransformerParallel
+
+
+0
+4
+4
+WC8C
+T37_Trifillar
+
+
+0
+6
+6

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Double-Balanced-Mixer)(type Legacy)(uri "${KIPRJMOD}/Double Balanced Mixer.lib")(options "")(descr ""))
+  (lib (name WC8C)(type Legacy)(uri ${KIPRJMOD}/WC8C.lib)(options "")(descr ""))
+)

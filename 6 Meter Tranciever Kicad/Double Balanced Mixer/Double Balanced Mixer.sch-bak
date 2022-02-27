@@ -1,0 +1,387 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Double Balanced Mixer"
+Date "2021-02-16"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 "Modulator/Demodulator"
+Comment3 "Optional Attenuation Pad for IF output used for"
+Comment4 "4db LO Attenuation Pad for SI5351 "
+$EndDescr
+$Comp
+L Device:Transformer_1P_2S T1
+U 1 1 602C7484
+P 5050 3650
+F 0 "T1" H 5050 4231 50  0000 C CNN
+F 1 "Balun" H 5050 4140 50  0000 C CNN
+F 2 "WC8C:T37_Trifillar" H 5050 3650 50  0001 C CNN
+F 3 "~" H 5050 3650 50  0001 C CNN
+	1    5050 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Transformer_1P_2S T2
+U 1 1 602C8341
+P 7800 3650
+F 0 "T2" H 7800 4231 50  0000 C CNN
+F 1 "Balun" H 7800 4140 50  0000 C CNN
+F 2 "WC8C:T37_Trifillar" H 7800 3650 50  0001 C CNN
+F 3 "~" H 7800 3650 50  0001 C CNN
+	1    7800 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L WC8C:BAT54XYH D1
+U 1 1 602D4BBF
+P 6300 3550
+F 0 "D1" H 6325 3965 50  0000 C CNN
+F 1 "BAT54XYH" H 6325 3874 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" V 6600 3300 50  0001 C CNN
+F 3 "" V 6600 3300 50  0001 C CNN
+	1    6300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 602D5630
+P 3500 3700
+F 0 "R1" H 3300 3750 50  0000 L CNN
+F 1 "1K" H 3300 3650 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 3430 3700 50  0001 C CNN
+F 3 "~" H 3500 3700 50  0001 C CNN
+	1    3500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 602D66C2
+P 4300 3700
+F 0 "R4" H 4370 3746 50  0000 L CNN
+F 1 "82R" H 4370 3655 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 4230 3700 50  0001 C CNN
+F 3 "~" H 4300 3700 50  0001 C CNN
+	1    4300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 602D6B78
+P 3900 3300
+F 0 "R2" V 3693 3300 50  0000 C CNN
+F 1 "Open" V 3784 3300 50  0000 C CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 3830 3300 50  0001 C CNN
+F 3 "~" H 3900 3300 50  0001 C CNN
+	1    3900 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 602D7962
+P 3900 3450
+F 0 "R3" V 4000 3450 50  0000 C CNN
+F 1 "62R" V 4100 3450 50  0000 C CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 3830 3450 50  0001 C CNN
+F 3 "~" H 3900 3450 50  0001 C CNN
+	1    3900 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 602D834C
+P 3900 3950
+F 0 "#PWR0101" H 3900 3700 50  0001 C CNN
+F 1 "GNDREF" H 3905 3777 50  0001 C CNN
+F 2 "" H 3900 3950 50  0001 C CNN
+F 3 "" H 3900 3950 50  0001 C CNN
+	1    3900 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3550 3500 3450
+Wire Wire Line
+	3500 3450 3750 3450
+Wire Wire Line
+	3750 3450 3750 3300
+Connection ~ 3750 3450
+Wire Wire Line
+	4050 3300 4050 3450
+Wire Wire Line
+	4050 3450 4300 3450
+Connection ~ 4050 3450
+Wire Wire Line
+	4650 3850 4300 3850
+Wire Wire Line
+	3500 3850 3900 3850
+Connection ~ 4300 3850
+Wire Wire Line
+	4300 3550 4300 3450
+Connection ~ 4300 3450
+Wire Wire Line
+	4300 3450 4650 3450
+Wire Wire Line
+	3900 3950 3900 3850
+Connection ~ 3900 3850
+Wire Wire Line
+	3900 3850 4300 3850
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 602EB79D
+P 5700 3800
+F 0 "#PWR0102" H 5700 3550 50  0001 C CNN
+F 1 "GNDREF" H 5705 3627 50  0001 C CNN
+F 2 "" H 5700 3800 50  0001 C CNN
+F 3 "" H 5700 3800 50  0001 C CNN
+	1    5700 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3550 7400 3650
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 602EDFD0
+P 2650 3450
+F 0 "J1" H 2800 3500 50  0000 C CNN
+F 1 "LO" H 2800 3600 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 2650 3450 50  0001 C CNN
+F 3 " ~" H 2650 3450 50  0001 C CNN
+	1    2650 3450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 602EF356
+P 8850 3450
+F 0 "J3" H 8950 3425 50  0000 L CNN
+F 1 "RF" H 8950 3334 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 8850 3450 50  0001 C CNN
+F 3 " ~" H 8850 3450 50  0001 C CNN
+	1    8850 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 602EF6D2
+P 7150 5400
+F 0 "J2" V 6950 5250 50  0000 L CNN
+F 1 "IF" V 7050 5250 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-2120_EdgeMount_Horizontal" H 7150 5400 50  0001 C CNN
+F 3 " ~" H 7150 5400 50  0001 C CNN
+	1    7150 5400
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	8850 3650 8850 3850
+Wire Wire Line
+	8850 3850 8200 3850
+Connection ~ 8200 3850
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 602F2208
+P 8200 5550
+F 0 "#PWR0103" H 8200 5300 50  0001 C CNN
+F 1 "GNDREF" H 8205 5377 50  0001 C CNN
+F 2 "" H 8200 5550 50  0001 C CNN
+F 3 "" H 8200 5550 50  0001 C CNN
+	1    8200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3650 7150 3650
+Wire Wire Line
+	7150 3650 7150 4300
+Connection ~ 7400 3650
+Wire Wire Line
+	7400 3650 7400 3750
+Wire Wire Line
+	8650 3450 8200 3450
+Wire Wire Line
+	2850 3450 3500 3450
+Connection ~ 3500 3450
+Wire Wire Line
+	2650 3650 2650 3850
+Wire Wire Line
+	2650 3850 3500 3850
+Connection ~ 3500 3850
+Wire Wire Line
+	6000 3650 5800 3650
+Wire Wire Line
+	6000 3450 5800 3450
+Wire Wire Line
+	5800 3450 5800 3250
+Wire Wire Line
+	5450 3250 5800 3250
+Wire Wire Line
+	6950 3450 6950 4050
+Wire Wire Line
+	6950 4050 7400 4050
+Wire Wire Line
+	5800 3650 5800 4050
+Wire Wire Line
+	5800 4050 5450 4050
+Wire Wire Line
+	6650 3650 6650 3550
+Wire Wire Line
+	6650 3550 6000 3550
+Wire Wire Line
+	6000 3550 6000 3450
+Connection ~ 6000 3450
+Wire Wire Line
+	6650 3850 6650 3750
+Wire Wire Line
+	6650 3750 6000 3750
+Wire Wire Line
+	6000 3750 6000 3650
+Connection ~ 6000 3650
+Wire Wire Line
+	6000 3850 5950 3850
+Wire Wire Line
+	5950 3850 5950 4050
+Wire Wire Line
+	5950 4050 6800 4050
+Wire Wire Line
+	6800 4050 6800 3250
+Wire Wire Line
+	6800 3250 7400 3250
+Wire Notes Line
+	3250 2750 4650 2750
+Wire Notes Line
+	4650 2750 4650 4250
+Wire Notes Line
+	4650 4250 3250 4250
+Wire Notes Line
+	3250 4250 3250 2750
+Text Notes 3300 2950 0    50   ~ 0
+7.2db Attenuation Pad\n85 in 50 out for SI5351
+Wire Wire Line
+	6650 3450 6950 3450
+Text Notes 2700 3350 0    50   ~ 0
+From SI5351
+Wire Wire Line
+	8200 3850 8200 4300
+$Comp
+L Device:R R6
+U 1 1 60427FE0
+P 7150 4550
+F 0 "R6" H 7220 4596 50  0000 L CNN
+F 1 "47R" H 7220 4505 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 7080 4550 50  0001 C CNN
+F 3 "~" H 7150 4550 50  0001 C CNN
+	1    7150 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6042879E
+P 7000 4550
+F 0 "R5" H 6800 4600 50  0000 L CNN
+F 1 "47R" H 6800 4500 50  0000 L CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 6930 4550 50  0001 C CNN
+F 3 "~" H 7000 4550 50  0001 C CNN
+	1    7000 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4400 7000 4300
+Wire Wire Line
+	7000 4300 7150 4300
+Connection ~ 7150 4300
+Wire Wire Line
+	7150 4300 7150 4400
+Wire Wire Line
+	7150 4700 7150 4850
+Wire Wire Line
+	7000 4700 7000 4850
+Wire Wire Line
+	7000 4850 7150 4850
+Connection ~ 7150 4850
+$Comp
+L Device:R R7
+U 1 1 6042BF14
+P 7650 4300
+F 0 "R7" V 7750 4300 50  0000 C CNN
+F 1 "220R" V 7850 4300 50  0000 C CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 7580 4300 50  0001 C CNN
+F 3 "~" H 7650 4300 50  0001 C CNN
+	1    7650 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 6042D191
+P 7650 4850
+F 0 "R8" V 7750 4850 50  0000 C CNN
+F 1 "220R" V 7850 4850 50  0000 C CNN
+F 2 "WC8C:SMD_Combo_1206_0805" V 7580 4850 50  0001 C CNN
+F 3 "~" H 7650 4850 50  0001 C CNN
+	1    7650 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 4300 7500 4300
+Wire Wire Line
+	7800 4300 8200 4300
+Connection ~ 8200 4300
+Wire Wire Line
+	8200 4300 8200 4850
+Wire Wire Line
+	7800 4850 8200 4850
+Connection ~ 8200 4850
+Wire Wire Line
+	7500 4850 7150 4850
+Wire Wire Line
+	7150 4850 7150 5200
+Wire Wire Line
+	7350 5400 8200 5400
+Wire Wire Line
+	8200 5400 8200 5550
+Wire Wire Line
+	8200 4850 8200 5400
+Connection ~ 8200 5400
+Text Notes 5350 4850 0    50   ~ 0
+Optional Attenuation Pad\nused for Modulator / Demodulator\nto help impeadance match into\nthe SSB filter.\n\nRemove jumper R5/R6 and \nremove R7/R8 to delete the Pad
+Wire Notes Line
+	7900 4150 7900 5150
+Wire Notes Line
+	7900 5150 5100 5150
+Wire Notes Line
+	5100 5150 5100 4150
+Wire Notes Line
+	5100 4150 7900 4150
+$Comp
+L Device:R_POT RV1
+U 1 1 61E3201B
+P 5550 3650
+F 0 "RV1" H 5650 3900 50  0000 R CNN
+F 1 "100R" H 5800 3800 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PT-6-V_Vertical" H 5550 3650 50  0001 C CNN
+F 3 "~" H 5550 3650 50  0001 C CNN
+	1    5550 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3500 5450 3500
+Wire Wire Line
+	5450 3500 5450 3550
+Wire Wire Line
+	5550 3800 5450 3800
+Wire Wire Line
+	5450 3800 5450 3750
+Wire Wire Line
+	5700 3650 5700 3800
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 61E531A0
+P 8200 5400
+F 0 "#FLG0101" H 8200 5475 50  0001 C CNN
+F 1 "PWR_FLAG" V 8200 5528 50  0000 L CNN
+F 2 "" H 8200 5400 50  0001 C CNN
+F 3 "~" H 8200 5400 50  0001 C CNN
+	1    8200 5400
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
