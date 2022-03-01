@@ -696,8 +696,6 @@ F 3 "~" H 1550 4500 50  0001 C CNN
 	1    1550 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1750 4500 2150 4500
 $Comp
 L power:GNDREF #PWR0108
 U 1 1 60ADDFD8
@@ -1761,25 +1759,6 @@ Wire Wire Line
 Connection ~ 7200 2300
 Wire Wire Line
 	7200 2300 7400 2300
-$Comp
-L Device:C C16
-U 1 1 622E15DD
-P 2150 4700
-F 0 "C16" H 2265 4746 50  0000 L CNN
-F 1 "33n" H 2265 4655 50  0000 L CNN
-F 2 "WC8C:SMD_Combo_1206_0805" H 2188 4550 50  0001 C CNN
-F 3 "~" H 2150 4700 50  0001 C CNN
-	1    2150 4700
-	1    0    0    -1  
-$EndComp
-Connection ~ 2150 4500
 Wire Wire Line
-	2550 4900 2150 4900
-Wire Wire Line
-	2150 4500 2550 4500
-Connection ~ 2550 4900
-Wire Wire Line
-	2150 4550 2150 4500
-Wire Wire Line
-	2150 4900 2150 4850
+	1750 4500 2550 4500
 $EndSCHEMATC

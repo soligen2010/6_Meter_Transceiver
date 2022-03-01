@@ -1046,24 +1046,4 @@ F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 2500 2500 50  0001 L CNN
 	1    2500 2500
 	0    1    -1   0   
 $EndComp
-$Comp
-L Device:C_Small C12
-U 1 1 622AA91A
-P 1150 3700
-F 0 "C12" H 900 3750 50  0000 L CNN
-F 1 "33n" H 900 3650 50  0000 L CNN
-F 2 "WC8C:SMD_Combo_1206_0805" H 1150 3700 50  0001 C CNN
-F 3 "~" H 1150 3700 50  0001 C CNN
-	1    1150 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1600 3400 1150 3400
-Wire Wire Line
-	1150 3400 1150 3600
-Wire Wire Line
-	1600 3950 1150 3950
-Wire Wire Line
-	1150 3950 1150 3800
-Connection ~ 1600 3950
 $EndSCHEMATC
